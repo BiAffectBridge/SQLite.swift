@@ -214,8 +214,8 @@ public protocol FailableIterator: IteratorProtocol {
 
 extension FailableIterator {
     public func next() -> Element? {
-        // Do not force try 
-        try? failableNext()
+        // swiftlint:disable:next force_try
+        try! failableNext()
     }
 }
 
